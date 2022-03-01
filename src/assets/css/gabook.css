@@ -1,0 +1,21 @@
+.gabook-navbar{
+    background-image: linear-gradient(180deg,rgb(141, 35, 35) 10%,rgb(150,1,1) 100%);
+}
+
+.content-tittle {
+    margin-left: 20px;
+    margin-top: 12px;
+
+}
+
+.total-products-users {
+    margin-top: 16px;
+}
+
+
+@media (min-width: 768px){
+.col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+}
