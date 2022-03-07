@@ -24,15 +24,16 @@ function Products() {
         <tr key={index}>
           <td>{book.id}</td>
           <td>{book.title}</td>
-          {/* <td>{user.user_email}</td> */}
-          {/* <td>{user.rol}</td> */}
+          <td>{book.author}</td>
+          <td>{book.genre.name}</td>
         </tr>
       ))
     ) : (
       <tr>
         <td>...Cargando</td>
         <td>...Cargando</td>
-        {/* <td>...Cargando</td> */}
+        <td>...Cargando</td>
+        <td>...Cargando</td>
       </tr>
     );
 
@@ -57,16 +58,16 @@ function Products() {
                 <tr>
                   <th>Id</th>
                   <th>Titulo</th>
-                  {/* <th>Correo</th> */}
-                  {/* <th>Rol</th> */}
+                  <th>Autor</th> 
+                  <th>Genero</th>
                 </tr>
               </thead>
               <tfoot>
                 <tr>
                   <th>Id</th>
                   <th>Titulo</th>
-                  {/* <th>Correo</th> */}
-                  {/* <th>Rol</th> */}
+                  <th>Autor</th> 
+                  <th>Genero</th>
                 </tr>
               </tfoot>
               <tbody>{contenido}</tbody>

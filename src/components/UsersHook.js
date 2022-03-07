@@ -18,7 +18,7 @@ function Users() {
     console.log(content);
     setUsersList(content);
   }, []);
-
+console.log(usersList)
   let contenido =
     usersList.length > 0 ? (
       usersList.map((user, index) => (
@@ -26,11 +26,12 @@ function Users() {
           <td>{user.id}</td>
           <td>{user.user_name}</td>
           <td>{user.user_email}</td>
-          {/* <td>{user.rol}</td> */}
+          {user.user_role==1? <td>Administrador</td>:<td>Usuario</td>}
         </tr>
       ))
     ) : (
       <tr>
+        <td>...Cargando</td>
         <td>...Cargando</td>
         <td>...Cargando</td>
         <td>...Cargando</td>
@@ -59,7 +60,7 @@ function Users() {
                   <th>Id</th>
                   <th>Usuario</th>
                   <th>Correo</th>
-                  {/* <th>Rol</th> */}
+                  <th>Rol</th>
                 </tr>
               </thead>
               <tfoot>
@@ -67,7 +68,7 @@ function Users() {
                   <th>Id</th>
                   <th>Usuario</th>
                   <th>Correo</th>
-                  {/* <th>Rol</th> */}
+                  <th>Rol</th>
                 </tr>
               </tfoot>
               <tbody>{contenido}</tbody>
