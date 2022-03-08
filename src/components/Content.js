@@ -19,7 +19,7 @@ function Content() {
 
   const callImageApi = async (id) => {
     try {
-      const result = await fetch(`api/products/${id}`);
+      const result = await fetch(`api/product/${id}`);
       const data = await result.json();
       return data.url_image
     } catch (error) {
